@@ -1,14 +1,80 @@
 {
-  "dewlo": { "password": "01232121", "status": "active", "type": "lifetime", "machineId": null },
-  "furkancan": { "password": "furkan21", "status": "active", "type": "lifetime", "machineId": null },
-  "user1": { "password": "rgt_7849_fx", "status": "active", "type": "monthly", "machineId": null },
-  "user2": { "password": "efk_9210_tr", "status": "active", "type": "lifetime", "machineId": null },
-  "user3": { "password": "dwl_3345_az", "status": "inactive", "type": "none", "machineId": null },
-  "user4": { "password": "mcr_5582_kp", "status": "inactive", "type": "none", "machineId": null },
-  "user5": { "password": "hst_1123_rt", "status": "inactive", "type": "none", "machineId": null },
-  "user6": { "password": "krt_6541_ym", "status": "inactive", "type": "none", "machineId": null },
-  "user7": { "password": "blt_8890_pl", "status": "inactive", "type": "none", "machineId": null },
-  "user8": { "password": "snc_3321_df", "status": "inactive", "type": "none", "machineId": null },
-  "user9": { "password": "prk_7744_zx", "status": "inactive", "type": "none", "machineId": null },
-  "user10": { "password": "lmn_9988_cv", "status": "inactive", "type": "none", "machineId": null }
+  "dewlo": {
+    "password": "01232121",
+    "status": "active",
+    "type": "lifetime",
+    "machineId": null
+  },
+  "furkancan": {
+    "password": "furkan21",
+    "status": "active",
+    "type": "lifetime",
+    "machineId": null
+  },
+  "user1": {
+    "password": "rgt_7849_fx",
+    "status": "active",
+    "type": "monthly",
+    "machineId": null
+  },
+  "user2": {
+    "password": "efk_9210_tr",
+    "status": "active",
+    "type": "lifetime",
+    "machineId": null
+  },
+  "user3": {
+    "password": "dwl_3345_az",
+    "status": "inactive",
+    "type": "none",
+    "machineId": null
+  },
+  "user4": {
+    "password": "mcr_5582_kp",
+    "status": "inactive",
+    "type": "none",
+    "machineId": null
+  },
+  "user5": {
+    "password": "hst_1123_rt",
+    "status": "inactive",
+    "type": "none",
+    "machineId": null
+  },
+  "user6": {
+    "password": "krt_6541_ym",
+    "status": "inactive",
+    "type": "none",
+    "machineId": null
+  },
+  "user7": {
+    "password": "blt_8890_pl",
+    "status": "inactive",
+    "type": "none",
+    "machineId": null
+  },
+  "user8": {
+    "password": "snc_3321_df",
+    "status": "inactive",
+    "type": "none",
+    "machineId": null
+  },
+  "user9": {
+    "password": "prk_7744_zx",
+    "status": "inactive",
+    "type": "none",
+    "machineId": null
+  },
+  "user10": {
+    "password": "lmn_9988_cv",
+    "status": "inactive",
+    "type": "none",
+    "machineId": null
+  },
+  "deneme": {
+    "pass": "deneme",
+    "machineId": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec",
+    "status": "pending",
+    "type": "daily"
+  }
 }
