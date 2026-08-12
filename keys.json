@@ -1,0 +1,4 @@
+{
+  "DENEME-KEY-1": { "type": "daily", "status": "active" },
+  "MASTER-KEY-99": { "type": "lifetime", "status": "active" }
+}
