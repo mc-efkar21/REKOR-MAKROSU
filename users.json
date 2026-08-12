@@ -1,6 +1,6 @@
 {
-  "dewlo": { "password": "01232121", "status": "active", "type": "lifetime", "machineId": null }
-  "furkancan": { "password": "furkan21", "status": "active", "type": "lifetime", "machineId": null }
+  "dewlo": { "password": "01232121", "status": "active", "type": "lifetime", "machineId": null },
+  "furkancan": { "password": "furkan21", "status": "active", "type": "lifetime", "machineId": null },
   "user1": { "password": "rgt_7849_fx", "status": "active", "type": "monthly", "machineId": null },
   "user2": { "password": "efk_9210_tr", "status": "active", "type": "lifetime", "machineId": null },
   "user3": { "password": "dwl_3345_az", "status": "inactive", "type": "none", "machineId": null },
