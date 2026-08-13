@@ -1,0 +1,201 @@
+(function() {
+    // Eski panel varsa temizle
+    const oldPanel = document.getElementById('macro-panel');
+    if (oldPanel) oldPanel.remove();
+    const oldStyle = document.getElementById('macro-panel-style');
+    if (oldStyle) oldStyle.remove();
+
+    // --- ŞEFFAF PANEL STİLİ ---
+    const style = document.createElement('style');
+    style.id = 'macro-panel-style';
+    style.innerHTML = `
+        #macro-panel {
+            position: fixed;
+            left: 20px;
+            top: 420px;
+            z-index: 999999;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(3px);
+            border: 2px solid rgba(0, 255, 255, 0.4);
+            border-radius: 12px;
+            padding: 10px;
+            font-family: sans-serif;
+            color: #ffffff;
+            width: 210px;
+            user-select: none;
+        }
+        #macro-panel h4 {
+            margin: 0 0 8px 0;
+            font-size: 13px;
+            text-align: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 6px;
+        }
+        .macro-btn-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1.5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+            padding: 6px 8px;
+            margin-bottom: 5px;
+            font-size: 11px;
+        }
+        .macro-btn-status span.indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #ef4444;
+        }
+        .macro-btn-status.active {
+            border-color: rgba(34, 197, 94, 0.9);
+            background: rgba(20, 83, 45, 0.75);
+        }
+        .macro-btn-status.active span.indicator {
+            background: #22c55e;
+        }
+    `;
+    document.head.appendChild(style);
+
+    const panel = document.createElement('div');
+    panel.id = 'macro-panel';
+    panel.innerHTML = `
+        <h4>DEWLEMEND DAYI</h4>
+        <div id="stat-b" class="macro-btn-status"><span>[B] Oto Doğma</span><span class="indicator"></span></div>
+        <div id="stat-n" class="macro-btn-status"><span>[N] Oto Space</span><span class="indicator"></span></div>
+        <div id="stat-m" class="macro-btn-status"><span>[M] Oto X</span><span class="indicator"></span></div>
+        <div id="stat-c" class="macro-btn-status" style="margin-top: 6px; border-top: 1px dashed rgba(255,255,255,0.3);"><span>[Ç] TEK T + MASTER</span><span class="indicator"></span></div>
+    `;
+    document.body.appendChild(panel);
+
+    // --- DEĞİŞKENLER ---
+    let autoRespawnActive = false;
+    let autoSpaceActive = false;
+    let autoXActive = false;
+    let masterActive = false;
+
+    let xTimer, spaceTimer, respawnTimer, olumKontrolTimer;
+
+    function updateUI() {
+        document.getElementById('stat-b').className = `macro-btn-status ${autoRespawnActive ? 'active' : ''}`;
+        document.getElementById('stat-n').className = `macro-btn-status ${autoSpaceActive ? 'active' : ''}`;
+        document.getElementById('stat-m').className = `macro-btn-status ${autoXActive ? 'active' : ''}`;
+        document.getElementById('stat-c').className = `macro-btn-status ${masterActive ? 'active' : ''}`;
+    }
+
+    function tusGonder(tus) {
+        let canvas = document.querySelector('canvas') || window;
+        let keyCodeVal = tus === ' ' ? 32 : tus.charCodeAt(0);
+        
+        canvas.dispatchEvent(new KeyboardEvent('keydown', { key: tus, code: tus === ' ' ? 'Space' : ('Key' + tus.toUpperCase()), keyCode: keyCodeVal, which: keyCodeVal, bubbles: true }));
+        canvas.dispatchEvent(new KeyboardEvent('keyup', { key: tus, code: tus === ' ' ? 'Space' : ('Key' + tus.toUpperCase()), keyCode: keyCodeVal, which: keyCodeVal, bubbles: true }));
+    }
+
+    function oynaButonunaTikla() {
+        let butonlar = document.querySelectorAll('button, div, span');
+        for (let btn of butonlar) {
+            if (btn.innerText && btn.innerText.trim() === 'Oyna' && btn.offsetParent !== null) {
+                btn.click();
+                break;
+            }
+        }
+    }
+
+    // --- DÖNGÜLER ---
+    function spaceDongusu() {
+        if (!autoSpaceActive && !masterActive) return;
+        tusGonder(' ');
+        spaceTimer = setTimeout(spaceDongusu, Math.floor(Math.random() * 100) + 200);
+    }
+
+    function xDongusu() {
+        if (!autoXActive && !masterActive) return;
+        tusGonder('x');
+        xTimer = setTimeout(xDongusu, Math.floor(Math.random() * 40) + 70);
+    }
+
+    function respawnDongusu() {
+        if (!autoRespawnActive && !masterActive) return;
+        oynaButonunaTikla();
+        respawnTimer = setTimeout(respawnDongusu, 1000);
+    }
+
+    function olumTakibiBaslat() {
+        olumKontrolTimer = setInterval(oynaButonunaTikla, 500);
+    }
+
+    function herseyiDurdur() {
+        autoRespawnActive = false;
+        autoSpaceActive = false;
+        autoXActive = false;
+        masterActive = false;
+        clearTimeout(xTimer);
+        clearTimeout(spaceTimer);
+        clearTimeout(respawnTimer);
+        clearInterval(olumKontrolTimer);
+        updateUI();
+    }
+
+    // --- KLAVYE KONTROLÜ ---
+    document.addEventListener('keydown', e => {
+        if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+        
+        // SHIFT tuşu ile acil durdurma
+        if (e.key === 'Shift' || e.code === 'ShiftLeft' || e.code === 'ShiftRight') {
+            herseyiDurdur();
+            return;
+        }
+
+        const key = e.key.toLowerCase();
+
+        if (key === 'b') {
+            autoRespawnActive = !autoRespawnActive;
+            if (autoRespawnActive) {
+                respawnDongusu();
+                olumTakibiBaslat();
+            } else {
+                clearTimeout(respawnTimer);
+                clearInterval(olumKontrolTimer);
+            }
+            updateUI();
+        }
+
+        if (key === 'n') {
+            autoSpaceActive = !autoSpaceActive;
+            if (autoSpaceActive) spaceDongusu();
+            else clearTimeout(spaceTimer);
+            updateUI();
+        }
+
+        if (key === 'm') {
+            autoXActive = !autoXActive;
+            if (autoXActive) xDongusu();
+            else clearTimeout(xTimer);
+            updateUI();
+        }
+
+        if (key === 'ç') {
+            masterActive = !masterActive;
+            if (masterActive) {
+                tusGonder('t');
+                autoRespawnActive = true;
+                autoSpaceActive = true;
+                autoXActive = true;
+                
+                oynaButonunaTikla();
+                xDongusu();
+                spaceDongusu();
+                respawnDongusu();
+                olumTakibiBaslat();
+            } else {
+                herseyiDurdur();
+            }
+            updateUI();
+        }
+
+        if (key === 'ö') {
+            herseyiDurdur();
+        }
+    });
+})();
