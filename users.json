@@ -10,7 +10,8 @@
     "password": "furkan21",
     "status": "active",
     "type": "lifetime",
-    "machineId": null
+    "machineId": null,
+    "sonGiris": "13.08.2026 21:27:00"
   },
   "user1": {
     "password": "rgt_7849_fx",
