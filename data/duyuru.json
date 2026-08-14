@@ -1,4 +1,8 @@
 {
-  "mesaj": "Cani beni lexe lexee ",
-  "aktifKullanicilariGoster": true
+  "id": "v1.1_update",
+  "tip": "warning",
+  "mesaj": "Cani beni lexe lexee - Yeni Sürüm Yayında!",
+  "aktifKullanicilariGoster": true,
+  "renk": "#38bdf8",
+  "gecerlilikTarihi": "2026-12-31"
 }
