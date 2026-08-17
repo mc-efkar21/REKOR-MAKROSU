@@ -8,7 +8,7 @@
     "sonGiris": "17.08.2026 16:07:37",
     "aktiflik": "Oyunda",
     "activeMachine": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec",
-    "sessionExpiry": 1786930855325
+    "expiry": "lifetime"
   },
   "furkancan": {
     "password": "furkan21",
@@ -18,19 +18,21 @@
     "sonGiris": "14.08.2026 03:02:29",
     "aktiflik": "Oyunda",
     "activeMachine": "9c00bd12680264e445b14ba38c104c95b2243506ebf4e3dee6b1d306ed37053c",
-    "sessionExpiry": 1786841250726
+    "expiry": "lifetime"
   },
   "user1": {
     "password": "rgt_7849_fx",
     "status": "active",
     "type": "monthly",
-    "machineId": null
+    "machineId": null,
+    "expiry": 1789689600000
   },
   "user2": {
     "password": "efk_9210_tr",
     "status": "active",
     "type": "lifetime",
-    "machineId": null
+    "machineId": null,
+    "expiry": "lifetime"
   },
   "dewo": {
     "password": "212121",
@@ -39,7 +41,8 @@
     "machineId": null,
     "activeMachine": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec",
     "sonGiris": "17.08.2026 22:41:07",
-    "aktiflik": "Oyunda"
+    "aktiflik": "Oyunda",
+    "expiry": 1787094067000
   },
   "user4": {
     "password": "mcr_5582_kp",
@@ -54,42 +57,49 @@
     "password": "hst_1123_rt",
     "status": "inactive",
     "type": "none",
-    "machineId": null
+    "machineId": null,
+    "expiry": null
   },
   "user6": {
     "password": "krt_6541_ym",
     "status": "inactive",
     "type": "none",
-    "machineId": null
+    "machineId": null,
+    "expiry": null
   },
   "user7": {
     "password": "blt_8890_pl",
     "status": "inactive",
     "type": "none",
-    "machineId": null
+    "machineId": null,
+    "expiry": null
   },
   "user8": {
     "password": "snc_3321_df",
     "status": "inactive",
     "type": "none",
-    "machineId": null
+    "machineId": null,
+    "expiry": null
   },
   "user9": {
     "password": "prk_7744_zx",
     "status": "inactive",
     "type": "none",
-    "machineId": null
+    "machineId": null,
+    "expiry": null
   },
   "user10": {
     "password": "lmn_9988_cv",
     "status": "inactive",
     "type": "none",
-    "machineId": null
+    "machineId": null,
+    "expiry": null
   },
   "deneme": {
-    "pass": "deneme",
+    "password": "deneme",
     "machineId": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec",
     "status": "pending",
-    "type": "daily"
+    "type": "daily",
+    "expiry": 1787094067000
   }
 }
