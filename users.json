@@ -21,7 +21,7 @@
     "expiry": "lifetime"
   },
   "user1": {
-    "password": "rgt_7849_fx",
+    "password": "user1",
     "status": "active",
     "type": "monthly",
     "machineId": null,
