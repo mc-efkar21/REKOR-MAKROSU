@@ -32,10 +32,10 @@
     "type": "lifetime",
     "machineId": null
   },
-  "user3": {
-    "password": "dwl_3345_az",
-    "status": "inactive",
-    "type": "none",
+  "dewo": {
+    "password": "212121",
+    "status": "active",
+    "type": "daily",
     "machineId": null
   },
   "user4": {
