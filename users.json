@@ -40,13 +40,14 @@
     "machineId": null,
     "activeMachine": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec"
   },
-  "user4": {
-        "password": "212121",
+  },
+    "user4": {
+        "password": "mcr_5582_kp",
         "status": "active",
         "type": "daily",
         "expiry": 1786937281000,
         "activeMachine": null
-  },
+    },
   "user5": {
     "password": "hst_1123_rt",
     "status": "inactive",
