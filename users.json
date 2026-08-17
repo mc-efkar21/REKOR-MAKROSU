@@ -36,7 +36,8 @@
     "password": "212121",
     "status": "active",
     "type": "daily",
-    "machineId": null
+    "machineId": null,
+    "activeMachine": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec"
   },
   "user4": {
     "password": "mcr_5582_kp",
