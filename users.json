@@ -5,7 +5,7 @@
     "type": "lifetime",
     "machineId": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec",
     "lastLogin": "14.08.2026 14:32:05",
-    "sonGiris": "17.08.2026 16:07:37",
+    "sonGiris": "17.08.2026 23:30:00",
     "aktiflik": "Oyunda",
     "activeMachine": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec",
     "expiry": "lifetime"
@@ -41,7 +41,7 @@
     "machineId": null,
     "activeMachine": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec",
     "sonGiris": "17.08.2026 22:41:07",
-    "aktiflik": "Oyunda",
+    "aktiflik": "Çevrimdışı",
     "expiry": 1787094067000
   },
   "user4": {
@@ -98,11 +98,8 @@
   "deneme": {
     "password": "deneme",
     "machineId": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec",
-    "status": "active",
+    "status": "pending",
     "type": "daily",
-    "expiry": 1787094067000,
-    "activeMachine": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec",
-    "sonGiris": "17.08.2026 23:28:48",
-    "aktiflik": "Oyunda"
+    "expiry": 1787094067000
   }
 }
