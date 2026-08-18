@@ -68,7 +68,10 @@
     "status": "active",
     "type": "daily",
     "machineId": null,
-    "expiry": null
+    "expiry": 1787176357967,
+    "activeMachine": "bbb2378a74c1820ba04c3bcc8aa5ffdfff477d97803a39967b1903d3237789d4",
+    "sonGiris": "19.08.2026 00:52:37",
+    "aktiflik": "Oyunda"
   },
   "user7": {
     "password": "blt_8890_pl",
