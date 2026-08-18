@@ -47,12 +47,12 @@
     "aktiflik": "Çevrimdışı",
     "expiry": 1787094067000
   },
-  "user4": {
-    "password": "mcr_5582_kp",
+  "xd47": {
+    "password": "ahmo47",
     "status": "active",
     "type": "daily",
     "expiry": 1786937281000,
-    "activeMachine": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec",
+    "activeMachine": "",
     "sonGiris": "17.08.2026 16:10:25",
     "aktiflik": "Oyunda"
   },
