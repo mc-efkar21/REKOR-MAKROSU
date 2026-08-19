@@ -102,14 +102,11 @@
     "machineId": null,
     "expiry": null
   },
-  "deneme": {
-    "password": "deneme",
-    "machineId": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec",
-    "status": "active",
-    "type": "daily",
-    "expiry": 1787094067000,
-    "activeMachine": "7512bad7d7fb5463beca06bc3b150ff7de1b9096269ff14c3bc05191c4d52bec",
-    "sonGiris": "18.08.2026 15:08:55",
-    "aktiflik": "Oyunda"
+  "user10": {
+    "password": "lmn_9988_cv",
+    "status": "inactive",
+    "type": "none",
+    "machineId": null,
+    "expiry": null
   }
 }
