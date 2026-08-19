@@ -48,11 +48,11 @@
     "aktiflik": "Çevrimdışı",
     "expiry": 1787094067000
   },
-  "xd47": {
-    "password": "ahmo47",
-    "status": "active",
+  "user3": {
+    "password": "user3",
+    "status": "acactive",
     "type": "daily",
-    "expiry": 1786937281000,
+    "expiry": ,
     "activeMachine": "",
     "sonGiris": "17.08.2026 16:10:25",
     "aktiflik": "Oyunda"
@@ -64,13 +64,13 @@
     "machineId": null,
     "expiry": null
   },
-  "xd4747": {
-    "password": "ahmet47",
+  "user4": {
+    "password": "user",
     "status": "active",
     "type": "daily",
     "machineId": null,
     "expiry": 1787176357967,
-    "activeMachine": "bbb2378a74c1820ba04c3bcc8aa5ffdfff477d97803a39967b1903d3237789d4",
+    "activeMachine": "",
     "sonGiris": "19.08.2026 00:52:37",
     "aktiflik": "Oyunda"
   },
